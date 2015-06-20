@@ -61,14 +61,3 @@ cacheSolve <- function(x, ...) {
         #returns inverse matrix
         M1  
 }
-
-# Prueba
-
-x <- matrix(rnorm(n = 9),nrow = 3, ncol = 3)
-x
-matriz <- makeCacheMatrix(x)
-matriz$get()
-matriz$getinvmat()
-cacheSolve(matriz)
-matriz$get() %*% matriz$getinvmat()
-solve(x)
